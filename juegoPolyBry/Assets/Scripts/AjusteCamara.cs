@@ -21,23 +21,21 @@ public class AjusteCamara : MonoBehaviour
     {
         if (isFollowing) 
         {
-            transform.position = pj.position + offset; 
+            transform.position = new Vector3(pj.position.x + offset.x, transform.position.y, pj.position.z + offset.z);
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.transform == pj) 
         {
-            Debug.Log("El personaje ha entrado en el límite.");
             isFollowing = true;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.transform == pj)
         {
-            Debug.Log("El personaje ha salido del límite.");
             isFollowing = false;
         }
     }
