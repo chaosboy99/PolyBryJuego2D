@@ -415,9 +415,9 @@ TextureImporter:
       name: pj2_16
       rect:
         serializedVersion: 2
-        x: 175
+        x: 179
         y: 56
-        width: 34
+        width: 30
         height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -630,7 +630,7 @@ TextureImporter:
         width: 7
         height: 1
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
