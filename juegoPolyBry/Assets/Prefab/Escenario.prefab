@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1963563614225201668}
   - component: {fileID: 361317704122413}
   - component: {fileID: -4314122708656878968}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Escenario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
