@@ -303,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.9341316, y: 3.3221476, z: -10}
+  m_LocalPosition: {x: 5.4614077, y: 3.3203514, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -501,6 +501,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1186603595290680474, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
+      propertyPath: combo
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1937401984270343861, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
       propertyPath: Jump
       value: 8
@@ -508,6 +512,10 @@ PrefabInstance:
     - target: {fileID: 1937401984270343861, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
       propertyPath: Speed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937401984270343861, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
+      propertyPath: atacando
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2130185673428183716, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
       propertyPath: m_LocalPosition.x

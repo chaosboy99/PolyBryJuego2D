@@ -6,6 +6,7 @@ public class Mov : MonoBehaviour
 {
     public float Speed = 3f;
     public float Jump = 2f;
+    public bool atacando = false;
     Rigidbody2D rb2D;
     public SpriteRenderer Sprite;
     public Animator Animator;
@@ -14,10 +15,25 @@ public class Mov : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
     }
+    private void Update()
+    {
+        
+    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Input.GetKey("e") && !atacando)
+        {
+            atacando = true;
+            Animator.SetBool("Ataque", true);
+        }
+        else
+        {
+            atacando = false;
+            Animator.SetBool("Ataque", false);
+        }
+    
         if (Input.GetKey("d") || Input.GetKey("right"))
         {
             rb2D.velocity = new Vector2(Speed, rb2D.velocity.y);
@@ -51,4 +67,5 @@ public class Mov : MonoBehaviour
             Animator.SetBool("Salto", false);
         }
     }
+       
 }
