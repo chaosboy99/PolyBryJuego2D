@@ -52,7 +52,7 @@ public class Mov : MonoBehaviour
             Animator.SetBool("Correr", false);
         }
 
-        if (Input.GetKey("space") && Suelo.EsSuelo)
+        if ((Input.GetKey("space") || Input.GetKey("w")) && Suelo.EsSuelo)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, Jump);
             Animator.SetBool("Correr", false);
