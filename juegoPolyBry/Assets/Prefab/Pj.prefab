@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  Jump: 100
+  Jump: 1000
   atacando: 0
   Sprite: {fileID: -7944155115713152324}
   Animator: {fileID: 5420911840607586518}
