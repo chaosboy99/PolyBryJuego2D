@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -6486906842081021570}
   - component: {fileID: -4696632942025571057}
   - component: {fileID: 2842298062191446758}
+  - component: {fileID: 8415560514604931570}
   m_Layer: 0
   m_Name: Animal
   m_TagString: Untagged
@@ -98,8 +99,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
-  m_LinearDrag: 10
+  m_Mass: 40
+  m_LinearDrag: 6
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -174,3 +175,15 @@ PolygonCollider2D:
       - {x: 0.0549705, y: 0.06292334}
       - {x: 0.045683507, y: 0.06849813}
   m_UseDelaunayMesh: 0
+--- !u!114 &8415560514604931570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8434836044908743213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a5225c9fca3f5458d2c92870801cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
