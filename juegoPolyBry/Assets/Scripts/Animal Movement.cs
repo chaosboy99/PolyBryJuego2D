@@ -9,7 +9,9 @@ public class Animalmovement : MonoBehaviour
     public float distancetoPlayer = 10f;
     public bool attaking = false, moveToLeft, moveToRight, wait;
     int movimiento;
-    Rigidbody2D rb2D;
+    public Rigidbody2D rb2D;
+    public SpriteRenderer Sprite;
+    public Animator Animator;
     /*public SpriteRenderer Sprite;
     public Animator Animator;*/
 
@@ -28,16 +30,20 @@ public class Animalmovement : MonoBehaviour
         if (wait)
         {
             rb2D.velocity = new Vector2(0 ,0);
+            
+
         }
         if (moveToLeft)
         {
             rb2D.velocity = new Vector2 (-speed, rb2D.velocity.y);
-            /*Sprite.flipX = true;*/
+            Sprite.flipX = true;
+            Animator.SetBool("WolfWalk", true);
         }
         if (moveToRight)
         {
             rb2D.velocity = new Vector2(speed, rb2D.velocity.y);
-            /*Sprite.flipX = false;*/
+            Sprite.flipX = false;
+            Animator.SetBool("WolfWalk", true);
         }
         if (attaking)
         {
@@ -81,5 +87,6 @@ public class Animalmovement : MonoBehaviour
         moveToLeft = false;
         moveToRight = false;
         wait = true;
+        Animator.SetBool("WolfWalk", false);
     }
 }

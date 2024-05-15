@@ -11,7 +11,6 @@ public class Mov : MonoBehaviour
     public SpriteRenderer Sprite;
     public Animator Animator;
 
-    public uint hp = 100, baseDamage = 4, damageDealt, damageRecieved;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,15 +68,4 @@ public class Mov : MonoBehaviour
             Animator.SetBool("Salto", false);
         }
     }
-
-    void Attack()
-    {
-        
-    }
-
-    void RecieveDamage()
-    {
-        hp -= damageRecieved;
-    }
-
 }
