@@ -20,38 +20,33 @@ public class Animalmovement : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         accion();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         if (wait)
         {
-            rb2D.velocity = new Vector2(0 ,0);
-            
-
+            rb2D.velocity = new Vector2(0, 0);
         }
+
         if (moveToLeft)
         {
-            rb2D.velocity = new Vector2 (-speed, rb2D.velocity.y);
-            Sprite.flipX = true;
-            Animator.SetBool("WolfWalk", true);
+            rb2D.velocity = new Vector2(-speed, rb2D.velocity.y);
+            Sprite.flipX = true;            
         }
-        if (moveToRight)
+        else if (moveToRight)
         {
             rb2D.velocity = new Vector2(speed, rb2D.velocity.y);
             Sprite.flipX = false;
-            Animator.SetBool("WolfWalk", true);
         }
+
         if (attaking)
         {
             wait = false;
             moveToLeft = false;
             moveToRight = false;
         }
-        
     }
 
     void accion()
@@ -63,21 +58,27 @@ public class Animalmovement : MonoBehaviour
             wait = true;
             moveToLeft = false;
             moveToRight = false;
+            Animator.SetBool("Wolf_idle", true);
+            Animator.SetBool("Wolf_walk", false);
         }
         if (movimiento == 2)
         {
             wait = false;
             moveToLeft = true;
             moveToRight = false;
-            StartCoroutine(timeMoving());
+            Animator.SetBool("Wolf_idle", false);
+            Animator.SetBool("Wolf_walk", true);
         }
         if (movimiento == 3)
         {
             wait = false;
             moveToLeft = false;
             moveToRight = true;
-            StartCoroutine(timeMoving());
+            Animator.SetBool("Wolf_idle", false);
+            Animator.SetBool("Wolf_walk", true);
+
         }
+        
         Invoke("accion", Random.Range(1,3));
     }
 
