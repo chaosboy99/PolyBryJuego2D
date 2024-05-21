@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 1937401984270343861}
   - component: {fileID: 5420911840607586518}
   - component: {fileID: 1490323203502729955}
+  - component: {fileID: 1955804007479968166}
   m_Layer: 0
   m_Name: Pj
   m_TagString: Untagged
@@ -113,6 +114,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7068718818445242166}
+  - {fileID: 8672439657602564687}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &-7944155115713152324
@@ -294,3 +296,49 @@ MonoBehaviour:
   PosicionPrimerCorazon: {fileID: 0}
   MyCanvas: {fileID: 0}
   OffSet: 0
+--- !u!114 &1955804007479968166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5423928336874853718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12783e8c5b698df48b3b6bb47b83d86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ataque: {fileID: 8672439657602564687}
+  radioGolpe: 0.7
+  "da\xF1oGolpe": 1
+--- !u!1 &8811253094085563441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8672439657602564687}
+  m_Layer: 0
+  m_Name: Ataque
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8672439657602564687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8811253094085563441}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.639, y: -0.047, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2130185673428183716}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

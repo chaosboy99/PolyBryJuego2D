@@ -9,7 +9,7 @@ public class Mov : MonoBehaviour
     public bool atacando = false;
     Rigidbody2D rb2D;
     public SpriteRenderer Sprite;
-    public Animator Animator;
+    public Animator Animator; 
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +26,10 @@ public class Mov : MonoBehaviour
     {
         if (Input.GetKey("e") && !atacando)
         {
+           
             atacando = true;
             Animator.SetBool("Ataque", true);
+            
         }
         else
         {
@@ -68,4 +70,5 @@ public class Mov : MonoBehaviour
             Animator.SetBool("Salto", false);
         }
     }
+    
 }

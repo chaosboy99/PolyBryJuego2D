@@ -227,6 +227,19 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: -6486906842081021570, guid: 31e21ed9da2147345a6c91f99bf86881, type: 3}
   m_PrefabInstance: {fileID: 536095528}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &256390786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256390772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee5db949f25ba940bc66d432748a63b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 20
 --- !u!1 &325704314
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +523,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.765703, y: 3.3280408, z: -10}
+  m_LocalPosition: {x: 6.113269, y: 3.3211465, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -918,6 +931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Animal
       objectReference: {fileID: 0}
+    - target: {fileID: 8434836044908743213, guid: 31e21ed9da2147345a6c91f99bf86881, type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
@@ -926,6 +943,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8434836044908743213, guid: 31e21ed9da2147345a6c91f99bf86881, type: 3}
       insertIndex: -1
       addedObject: {fileID: 256390778}
+    - targetCorrespondingSourceObject: {fileID: 8434836044908743213, guid: 31e21ed9da2147345a6c91f99bf86881, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 256390786}
   m_SourcePrefab: {fileID: 100100000, guid: 31e21ed9da2147345a6c91f99bf86881, type: 3}
 --- !u!1 &760762690
 GameObject:
@@ -1208,6 +1228,14 @@ PrefabInstance:
     - target: {fileID: 1937401984270343861, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
       propertyPath: atacando
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937401984270343861, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
+      propertyPath: radioGolpe
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955804007479968166, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
+      propertyPath: "da\xF1oGolpe"
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2130185673428183716, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
       propertyPath: m_LocalPosition.x
