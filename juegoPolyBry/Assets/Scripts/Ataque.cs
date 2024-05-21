@@ -8,6 +8,8 @@ public class Ataque : MonoBehaviour
     public float radioGolpe;
     public int dañoGolpe;
     private Vida vida;
+    public Mov mov;
+    public float cooldownAttackTime = 0.8f, lastAttackTime = -1000f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +19,24 @@ public class Ataque : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("e"))
+
+        if (Input.GetKey("e") && Time.time >= lastAttackTime + cooldownAttackTime)
         {
-            Golpe();
+            lastAttackTime = Time.time;
+
+            if (mov.Sprite.flipX == false)
+            {
+                GolpeIzq();
+            }
+            else if (mov.Sprite.flipX == true)
+            {
+                GolpeDer();
+            }
         }
-       
-        
+
+
     }
-    private void Golpe()
+    private void GolpeIzq()
     {
 
         Collider2D[] objetos = Physics2D.OverlapCircleAll(ataque.position, radioGolpe);
@@ -34,10 +46,24 @@ public class Ataque : MonoBehaviour
 
             if (col.CompareTag("Enemigo"))
             {   
+                
+                col.transform.GetComponent<Enemigo>().recibirDaño(dañoGolpe);
+                
+            }
+            
+        }
+    }
+    private void GolpeDer()
+    {
 
+        Collider2D[] objetos = Physics2D.OverlapCircleAll(new Vector2(transform.position.x - (ataque.position.x - transform.position.x), ataque.position.y), radioGolpe);
+
+        foreach (Collider2D col in objetos)
+        {
+            if (col.CompareTag("Enemigo"))
+            {
                 col.transform.GetComponent<Enemigo>().recibirDaño(dañoGolpe);
             }
-
         }
     }
     private void OnDrawGizmos()
@@ -45,11 +71,4 @@ public class Ataque : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(ataque.position, radioGolpe);
     }
-    /*void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemigo"))
-        {
-            vida.ReducirVida(1);  
-        }
-    }*/
 }
