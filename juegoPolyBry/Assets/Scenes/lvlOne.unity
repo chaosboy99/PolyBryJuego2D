@@ -535,7 +535,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.113269, y: 3.3211465, z: -10}
+  m_LocalPosition: {x: 8.556234, y: 3.3241262, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1230,6 +1230,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1490323203502729955, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
+      propertyPath: Life
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490323203502729955, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
       propertyPath: OffSet
       value: 55
       objectReference: {fileID: 0}
@@ -1241,6 +1245,14 @@ PrefabInstance:
       propertyPath: MyCanvas
       value: 
       objectReference: {fileID: 325704317}
+    - target: {fileID: 1490323203502729955, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
+      propertyPath: hp_bar_0
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490323203502729955, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
+      propertyPath: PosicionHpBar
+      value: 
+      objectReference: {fileID: 1765310129}
     - target: {fileID: 1490323203502729955, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
       propertyPath: PosicionPrimerCorazon
       value: 

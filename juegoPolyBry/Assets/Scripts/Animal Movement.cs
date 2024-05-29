@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -7,7 +8,7 @@ using UnityEngine;
 public class Animalmovement : MonoBehaviour
 {
     public float speed = 8f;
-    public float distancetoPlayer = 10f;
+    public float distanceToPlayer = 10f;
     public bool attaking = false, moveToLeft, moveToRight, wait, dead = false;
     int movimiento;
     public Rigidbody2D rb2D;
@@ -15,6 +16,7 @@ public class Animalmovement : MonoBehaviour
     public Animator Animator;
     public Enemigo enemigo;
     public int enemyHp;
+    public static bool playerTocaLobo;
     
     /*public SpriteRenderer Sprite;
     public Animator Animator;*/
@@ -96,6 +98,15 @@ public class Animalmovement : MonoBehaviour
             Invoke("accion", Random.Range(1, 3));
         }
     }
-    
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        playerTocaLobo = true;
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        playerTocaLobo = false;
+    }
 
 }
