@@ -222,11 +222,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!50 &256390781 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: -4696632942025571057, guid: 31e21ed9da2147345a6c91f99bf86881, type: 3}
-  m_PrefabInstance: {fileID: 536095528}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &256390782 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: -6486906842081021570, guid: 31e21ed9da2147345a6c91f99bf86881, type: 3}
@@ -244,8 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee5db949f25ba940bc66d432748a63b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 20
-  vidaAct: 20
+  vida: 2
   animator: {fileID: 256390778}
 --- !u!1 &325704314
 GameObject:
@@ -295,10 +289,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -541,7 +535,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.765703, y: 3.3280408, z: -10}
+  m_LocalPosition: {x: 6.113269, y: 3.3211465, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -940,7 +934,7 @@ PrefabInstance:
     - target: {fileID: 8415560514604931570, guid: 31e21ed9da2147345a6c91f99bf86881, type: 3}
       propertyPath: rb2D
       value: 
-      objectReference: {fileID: 256390781}
+      objectReference: {fileID: 0}
     - target: {fileID: 8415560514604931570, guid: 31e21ed9da2147345a6c91f99bf86881, type: 3}
       propertyPath: state
       value: 0

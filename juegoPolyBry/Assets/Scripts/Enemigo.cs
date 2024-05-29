@@ -7,7 +7,7 @@ using UnityEngine;
 public class Enemigo : MonoBehaviour
 {
     public int vida;
-    public int vidaAct;
+    private int vidaAct;
     public Animator animator;
     
 
@@ -16,6 +16,7 @@ public class Enemigo : MonoBehaviour
     void Start()
     {
         animator.SetBool("Wolf_die", false);
+        vidaAct = vida; 
     }
 
     // Update is called once per frame

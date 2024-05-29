@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4149112773509101169}
   - component: {fileID: -6486906842081021570}
-  - component: {fileID: -4696632942025571057}
-  - component: {fileID: 2842298062191446758}
   - component: {fileID: 8415560514604931570}
+  - component: {fileID: 1862690576294843699}
+  - component: {fileID: 2302032363186405100}
   m_Layer: 0
   m_Name: Animal
   m_TagString: Untagged
@@ -87,7 +87,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &-4696632942025571057
+--- !u!114 &8415560514604931570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8434836044908743213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a5225c9fca3f5458d2c92870801cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  distancetoPlayer: 10
+  attaking: 0
+  moveToLeft: 0
+  moveToRight: 0
+  wait: 0
+  dead: 0
+  rb2D: {fileID: 1862690576294843699}
+  Sprite: {fileID: -6486906842081021570}
+  Animator: {fileID: 0}
+  enemigo: {fileID: 0}
+  enemyHp: 0
+--- !u!50 &1862690576294843699
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -99,8 +123,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 40
-  m_LinearDrag: 6
+  m_Mass: 1
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -114,7 +138,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &2842298062191446758
+--- !u!60 &2302032363186405100
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,38 +182,23 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.042733934, y: 0.06734796}
-      - {x: -0.052398946, y: 0.061393514}
-      - {x: -0.062729, y: 0.053646773}
-      - {x: -0.06793077, y: 0.045846574}
-      - {x: -0.06826809, y: -0.04261895}
-      - {x: -0.06087825, y: -0.055833977}
-      - {x: -0.05131109, y: -0.06419115}
-      - {x: -0.04117348, y: -0.06878092}
-      - {x: 0.044980187, y: -0.068498135}
-      - {x: 0.056128073, y: -0.06164519}
-      - {x: 0.06403933, y: -0.0534335}
-      - {x: 0.06964834, y: -0.043897405}
-      - {x: 0.0693033, y: 0.041820437}
-      - {x: 0.06287994, y: 0.051950842}
-      - {x: 0.0549705, y: 0.06292334}
-      - {x: 0.045683507, y: 0.06849813}
+    - - {x: 0.02, y: -0.29}
+      - {x: 0.049999997, y: -0.29999998}
+      - {x: 0.19999999, y: -0.29999998}
+      - {x: 0.22, y: -0.28}
+      - {x: 0.19, y: -0.11}
+      - {x: 0.38, y: 0.049999997}
+      - {x: 0.38, y: 0.22}
+      - {x: 0.29, y: 0.29999998}
+      - {x: 0.19, y: 0.29999998}
+      - {x: 0.07, y: 0.19}
+      - {x: -0.22999999, y: 0.17999999}
+      - {x: -0.38, y: 0.02}
+      - {x: -0.38, y: -0.21}
+      - {x: -0.34, y: -0.29999998}
+      - {x: -0.14, y: -0.29999998}
+      - {x: -0.11, y: -0.29}
+      - {x: -0.099999994, y: -0.26999998}
+      - {x: -0.099999994, y: -0.24}
+      - {x: -0.089999996, y: -0.099999994}
   m_UseDelaunayMesh: 0
---- !u!114 &8415560514604931570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8434836044908743213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8a5225c9fca3f5458d2c92870801cbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  distancetoPlayer: 10
-  attaking: 0
-  moveToLeft: 0
-  moveToRight: 0
-  wait: 0
