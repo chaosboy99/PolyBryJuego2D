@@ -20,7 +20,7 @@ public class Ataque : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey("e") && Time.time >= lastAttackTime + cooldownAttackTime)
+        if (Input.GetKey("e") && Time.time >= lastAttackTime + cooldownAttackTime && (!Input.GetKey("a") || !Input.GetKey("d")))
         {
             lastAttackTime = Time.time;
 

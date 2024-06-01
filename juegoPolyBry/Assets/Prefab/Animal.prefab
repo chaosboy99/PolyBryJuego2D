@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8415560514604931570}
   - component: {fileID: 1862690576294843699}
   - component: {fileID: 2302032363186405100}
+  - component: {fileID: 6166043252290180265}
   m_Layer: 0
   m_Name: Animal
   m_TagString: Untagged
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  distancetoPlayer: 10
+  distanceToPlayer: 10
   attaking: 0
   moveToLeft: 0
   moveToRight: 0
@@ -202,3 +203,24 @@ PolygonCollider2D:
       - {x: -0.099999994, y: -0.24}
       - {x: -0.089999996, y: -0.099999994}
   m_UseDelaunayMesh: 0
+--- !u!95 &6166043252290180265
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8434836044908743213}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e284b0ef9fe924b48a9dcf6c126529f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

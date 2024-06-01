@@ -55,12 +55,12 @@ public class Mov : MonoBehaviour
             Animator.SetBool("Correr", false);
         }
 
-        if ((Input.GetKey("space") || Input.GetKey("w")) && Suelo.EsSuelo == true)
+        if ((Input.GetKey("space") || Input.GetKey("w")) && Suelo.EsSuelo)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, Jump);
             Animator.SetBool("Correr", false);
         }
-        if (Suelo.EsSuelo == false && Animalmovement.playerTocaLobo == false)
+        if (Suelo.EsSuelo == false)
         {
             Animator.SetBool("Salto", true);
             Animator.SetBool("Correr", false);
@@ -69,16 +69,6 @@ public class Mov : MonoBehaviour
         {
             Animator.SetBool("Salto", false);
         }
-        if (Animalmovement.playerTocaLobo == true && Suelo.EsSuelo == false)
-        {
-            Animator.SetBool("Salto", false);
-        }
-        if (Animalmovement.playerTocaLobo == true && (Input.GetKey("a")  || Input.GetKey("d")) && Suelo.EsSuelo == false)
-        {
-            Animator.SetBool("Correr", true);
-            Animator.SetBool("Salto", false);
-        }
-
     }
     
 }

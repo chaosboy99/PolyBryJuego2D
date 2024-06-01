@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 1937401984270343861}
   - component: {fileID: 5420911840607586518}
   - component: {fileID: 1490323203502729955}
-  - component: {fileID: 1955804007479968166}
   m_Layer: 0
   m_Name: Pj
   m_TagString: Untagged
@@ -291,26 +290,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83a5fd89186a244ebafa9ce95faec26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Corazon: {fileID: 0}
-  CantidadCorazones: 5
-  PosicionPrimerCorazon: {fileID: 0}
+  hp_bar_0: {fileID: 0}
+  hp_bar_1: {fileID: 0}
+  hp_bar_2: {fileID: 0}
+  hp_bar_3: {fileID: 0}
+  hp_bar_4: {fileID: 0}
+  hp_bar_5: {fileID: 0}
+  life: 100
+  PosicionHpBar: {fileID: 0}
   MyCanvas: {fileID: 0}
   OffSet: 0
---- !u!114 &1955804007479968166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5423928336874853718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12783e8c5b698df48b3b6bb47b83d86b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ataque: {fileID: 8672439657602564687}
-  radioGolpe: 0.7
-  "da\xF1oGolpe": 1
 --- !u!1 &8811253094085563441
 GameObject:
   m_ObjectHideFlags: 0
