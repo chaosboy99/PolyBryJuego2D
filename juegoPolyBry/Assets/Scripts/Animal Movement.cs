@@ -99,12 +99,7 @@ public class Animalmovement : MonoBehaviour
             Sprite.flipX = false;
         }
 
-        if (attacking)
-        {
-            wait = false;
-            moveToLeft = false;
-            moveToRight = false;
-        }
+
     }
 
     void accion()
@@ -137,6 +132,7 @@ public class Animalmovement : MonoBehaviour
                 moveToLeft = false;
                 moveToRight = false;
                 hunt = false;
+                attacking = false;
                 Animator.SetBool("Wolf_idle", true);
                 Animator.SetBool("Wolf_walk", false);
                 Animator.SetBool("Wolf_run", false);
@@ -147,6 +143,7 @@ public class Animalmovement : MonoBehaviour
                 moveToLeft = true;
                 moveToRight = false;
                 hunt = false;
+                attacking = false;
                 Animator.SetBool("Wolf_idle", false);
                 Animator.SetBool("Wolf_walk", true);
                 Animator.SetBool("Wolf_run", false);
@@ -157,6 +154,7 @@ public class Animalmovement : MonoBehaviour
                 moveToLeft = false;
                 moveToRight = true;
                 hunt = false;
+                attacking = false;
                 Animator.SetBool("Wolf_idle", false);
                 Animator.SetBool("Wolf_walk", true);
                 Animator.SetBool("Wolf_run", false);
@@ -167,6 +165,7 @@ public class Animalmovement : MonoBehaviour
                 moveToLeft = false;
                 moveToRight = false;
                 hunt = true;
+                attacking = false;
                 break;
             case 5:
                 wait = false;
