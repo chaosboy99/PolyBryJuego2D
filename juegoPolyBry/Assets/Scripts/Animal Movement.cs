@@ -8,8 +8,8 @@ using UnityEngine;
 public class Animalmovement : MonoBehaviour
 {
     public float speed = 6f, checkDistanceToPlayer = 10f;
-    private bool attacking = false, moveToLeft, moveToRight, wait, hunt;
-    public bool dead = false;
+    private bool moveToLeft, moveToRight, wait, hunt;
+    public bool attacking = false, dead = false;
     private int movimiento;
     public int enemyHp = 20;
     public Rigidbody2D rb2D;
@@ -45,33 +45,30 @@ public class Animalmovement : MonoBehaviour
             Animator.SetBool("Wolf_idle", true);
             Animator.SetBool("Wolf_walk", false);
             Animator.SetBool("Wolf_run", false);
+            rb2D.velocity = Vector2.zero;
         }
 
         if (actionCooldown <= 0f && Mathf.Abs(distanceAnimalToPlayer.x) < checkDistanceToPlayer)
         {
             accion();
-            actionCooldown = actionCooldownTime; // Reiniciar el tiempo de espera
+            actionCooldown = actionCooldownTime;
         }
 
         actionCooldown -= Time.fixedDeltaTime;
         if (attacking)
         {
-            // Añadir la lógica de ataque aquí
             Animator.SetBool("Wolf_attack", true);
             Animator.SetBool("Wolf_idle", false);
             Animator.SetBool("Wolf_walk", false);
             Animator.SetBool("Wolf_run", false);
+            rb2D.velocity = Vector2.zero;
             
-            // Aquí puedes implementar la lógica del daño al jugador
-            // Por ejemplo: enemigo.AttackPlayer();
-
-            rb2D.velocity = Vector2.zero; // Mantener al lobo quieto mientras ataca
         }
+
         if (hunt)
         {
             if (Mathf.Abs(distanceAnimalToPlayer.x) < checkDistanceToPlayer)
             {
-                // Perseguir al jugador
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPos.position.x, transform.position.y), speed * 1.4f * Time.deltaTime);
                 Animator.SetBool("Wolf_idle", false);
                 Animator.SetBool("Wolf_walk", false);
@@ -98,14 +95,11 @@ public class Animalmovement : MonoBehaviour
             rb2D.velocity = new Vector2(speed, rb2D.velocity.y);
             Sprite.flipX = false;
         }
-
-
     }
 
     void accion()
     {
         print("------------------------Nueva accion------------------------");
-
 
         if (Mathf.Abs(distanceAnimalToPlayer.x) > 12)
         {
@@ -125,6 +119,7 @@ public class Animalmovement : MonoBehaviour
         }
 
         print("ACCION ---------------------> " + movimiento);
+
         switch (movimiento)
         {
             case 1:

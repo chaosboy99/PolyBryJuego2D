@@ -9,7 +9,8 @@ public class Mov : MonoBehaviour
     public bool atacando = false;
     Rigidbody2D rb2D;
     public SpriteRenderer Sprite;
-    public Animator Animator; 
+    public Animator Animator;
+    public float cooldownAttackTime = 0.8f, lastAttackTime = -1000f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +25,9 @@ public class Mov : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey("e") && !atacando)
+        if (Input.GetKey("e") && Time.time >= lastAttackTime + cooldownAttackTime)
         {
-           
+            lastAttackTime = Time.time;
             atacando = true;
             Animator.SetBool("Ataque", true);
             
