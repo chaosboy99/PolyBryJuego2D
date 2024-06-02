@@ -6,68 +6,90 @@ using UnityEngine.SceneManagement;
 
 public class Vida : MonoBehaviour
 {
-    public Image hp_bar_0;
-    public Image hp_bar_1;
-    public Image hp_bar_2;
-    public Image hp_bar_3;
-    public Image hp_bar_4;
-    public Image hp_bar_5;
+    public Sprite hp_bar_0;
+    public Sprite hp_bar_1;
+    public Sprite hp_bar_2;
+    public Sprite hp_bar_3;
+    public Sprite hp_bar_4;
+    public Sprite hp_bar_5;
+    public Sprite inventarioHud;
     public int life = 100;
-    public RectTransform PosicionHpBar;
+    public RectTransform PosicionHpBar, PosicionInventarioHud;
     public Canvas MyCanvas;
     public int OffSet;
-    private List<Image> corazones = new List<Image>();
+    private List<Sprite> corazones = new List<Sprite>();
 
+    private Image hpImage, hudInventory;
 
     // Start is called before the first frame update
     void Start()
     {
-        //CORREJIR, NO FUNCIONA
-        Image fullHp = Instantiate(hp_bar_0, PosicionHpBar.position, Quaternion.identity);
+        corazones.Add(hp_bar_0);
+        corazones.Add(hp_bar_1);
+        corazones.Add(hp_bar_2);
+        corazones.Add(hp_bar_3);
+        corazones.Add(hp_bar_4);
+        corazones.Add(hp_bar_5);
+
+        GameObject hpBar = new GameObject("HP Bar");
+        GameObject inventario = new GameObject("InventoryHUD");
+        hpBar.transform.SetParent(MyCanvas.transform);
+        inventario.transform.SetParent(MyCanvas.transform);
+
+        hpImage = hpBar.AddComponent<Image>();
+        hudInventory = inventario.AddComponent<Image>();
+
+        RectTransform rt = hpBar.GetComponent<RectTransform>();
+        RectTransform rts = inventario.GetComponent<RectTransform>();
+        rt.position = PosicionHpBar.position;
+        rt.sizeDelta = new Vector2(220, 60);
+        rts.position = PosicionInventarioHud.position;
+        rts.sizeDelta = new Vector2(660, 180);
+        hudInventory.sprite = inventarioHud;
+
     }
 
-    //TERMINAR UPDATE
     private void Update()
     {
         if (life >= 80)
         {
-            //hpbar 0
+            hpImage.sprite = hp_bar_0;
         }
-        else if (life <80 && life > 60)
+        else if (life < 80 && life >= 60)
         {
-            //hpbar 1
+            hpImage.sprite = hp_bar_1;
         }
-        else if (life <=60 && life > 40)
+        else if (life < 60 && life >= 40)
         {
-            //hpbar 2
+            hpImage.sprite = hp_bar_2;
         }
-        else if (life <= 40 && life > 20)
+        else if (life < 40 && life >= 20)
         {
-            //hpbar 3
+            hpImage.sprite = hp_bar_3;
         }
-        else if (life <= 20 && life > 0)
+        else if (life < 20 && life > 0)
         {
-            //hpbar 4
+            hpImage.sprite = hp_bar_4;
         }
-        else if(life <= 0)
+        else if (life <= 0)
         {
-            //hpbar 5
+            hpImage.sprite = hp_bar_5;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void recibirDaño(int daño)
     {
-        /*if (collision.gameObject.tag == "Enemigo")
+        life -= daño;
+        if (life <= 0)
         {
-            Destroy(MyCanvas.transform.GetChild(CantidadCorazones + 1).gameObject);
-            CantidadCorazones -= 1;
-           
+            life = 0;
+            Die();
         }
-        if (CantidadCorazones <= 0)
-        {
-            SceneManager.LoadScene(2);
-            Destroy(gameObject);
+    }
 
-        }*/
+    public void Die()
+    {
+        //agregar animación de muerte del personaje
+        SceneManager.LoadScene(2);
     }
 }

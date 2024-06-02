@@ -8,8 +8,8 @@ using UnityEngine;
 public class Animalmovement : MonoBehaviour
 {
     public float speed = 6f, checkDistanceToPlayer = 10f;
-    private bool attacking = false, moveToLeft, moveToRight, wait, hunt;
-    public bool dead = false;
+    private bool moveToLeft, moveToRight, wait, hunt;
+    public bool attacking = false, dead = false;
     private int movimiento;
     public int enemyHp = 20;
     public Rigidbody2D rb2D;
@@ -20,7 +20,7 @@ public class Animalmovement : MonoBehaviour
     public Vida vida;
     public Vector2 distanceAnimalToPlayer;
     private float actionCooldown = 0f;
-    private float actionCooldownTime = 2f; // Tiempo de espera entre acciones
+    private float actionCooldownTime = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -50,22 +50,17 @@ public class Animalmovement : MonoBehaviour
         if (actionCooldown <= 0f && Mathf.Abs(distanceAnimalToPlayer.x) < checkDistanceToPlayer)
         {
             accion();
-            actionCooldown = actionCooldownTime; // Reiniciar el tiempo de espera
+            actionCooldown = actionCooldownTime;
         }
 
         actionCooldown -= Time.fixedDeltaTime;
         if (attacking)
         {
-            // Añadir la lógica de ataque aquí
             Animator.SetBool("Wolf_attack", true);
             Animator.SetBool("Wolf_idle", false);
             Animator.SetBool("Wolf_walk", false);
             Animator.SetBool("Wolf_run", false);
-            
-            // Aquí puedes implementar la lógica del daño al jugador
-            // Por ejemplo: enemigo.AttackPlayer();
-
-            rb2D.velocity = Vector2.zero; // Mantener al lobo quieto mientras ataca
+            rb2D.velocity = Vector2.zero;
         }
         if (hunt)
         {
@@ -109,19 +104,19 @@ public class Animalmovement : MonoBehaviour
 
         if (Mathf.Abs(distanceAnimalToPlayer.x) > 12)
         {
-            movimiento = Random.Range(1, 4); // Movimiento aleatorio
+            movimiento = Random.Range(1, 4);
         }
         else if (Mathf.Abs(distanceAnimalToPlayer.x) > checkDistanceToPlayer && Mathf.Abs(distanceAnimalToPlayer.x) <= 12)
         {
-            movimiento = 1; // Quedarse quieto en la dirección adecuada
+            movimiento = 1;
         }
         else if (Mathf.Abs(distanceAnimalToPlayer.x) <= checkDistanceToPlayer && Mathf.Abs(distanceAnimalToPlayer.x) > 1.5f)
         {
-            movimiento = 4; // Perseguir al jugador
+            movimiento = 4;
         }
         else if (hunt && Mathf.Abs(distanceAnimalToPlayer.x) <= 1.5f)
         {
-            movimiento = 5; // Ataque
+            movimiento = 5;
         }
 
         print("ACCION ---------------------> " + movimiento);
