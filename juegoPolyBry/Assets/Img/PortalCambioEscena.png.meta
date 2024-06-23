@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3030f38963f902148bea9f94ae1ff6c6
+guid: 6eb3e9f19d29e544bb749101991739f4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,7 +44,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 8
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,127 +97,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hp bar_0
+      name: PortalCambioEscena_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 836
-        width: 480
-        height: 129
+        x: 37
+        y: 27
+        width: 143
+        height: 275
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f96dbd0702e1ec4386fe45bf6617ecd
-      internalID: -1627858678
+      spriteID: 4fb080ee8434e374bafa52107d10a587
+      internalID: 762478332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hp bar_1
+      name: PortalCambioEscena_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 672
-        width: 480
-        height: 128
+        x: 253
+        y: 27
+        width: 145
+        height: 275
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa62d6820d5942c408c9aa676f4207da
-      internalID: 1514361949
+      spriteID: 6fa8a167ca0aead42ad53abd815f61d6
+      internalID: -1360332688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hp bar_2
+      name: PortalCambioEscena_2
       rect:
         serializedVersion: 2
-        x: 15
-        y: 508
-        width: 480
-        height: 129
+        x: 471
+        y: 27
+        width: 140
+        height: 275
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fdc1f6da8d5467419e458839ec03ed4
-      internalID: -1180527965
+      spriteID: a525908687ce3894dbd1407644951f29
+      internalID: 1189741591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hp bar_3
+      name: PortalCambioEscena_3
       rect:
         serializedVersion: 2
-        x: 15
-        y: 344
-        width: 480
-        height: 129
+        x: 684
+        y: 27
+        width: 143
+        height: 275
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3da365ec2aa743d429f5a18a00c5aa54
-      internalID: -883231705
+      spriteID: e4902d9e5eb6cc64cb5de471807047b9
+      internalID: -1097144377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hp bar_4
+      name: PortalCambioEscena_5
       rect:
         serializedVersion: 2
-        x: 15
-        y: 180
-        width: 480
-        height: 128
+        x: 1119
+        y: 27
+        width: 154
+        height: 275
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3189bbd311bd55140a1e72d7617a0fa7
-      internalID: -597743072
+      spriteID: e24f4b77277660047945226d1086afee
+      internalID: 1089039078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hp bar_5
+      name: PortalCambioEscena_6
       rect:
         serializedVersion: 2
-        x: 15
-        y: 16
-        width: 480
-        height: 128
+        x: 1347
+        y: 27
+        width: 152
+        height: 275
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c414eedfa236a249b94fab1249b722f
-      internalID: 269270378
+      spriteID: a1ca10186d88b0542a45c365f3a43356
+      internalID: 461423649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalCambioEscena_7
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 27
+        width: 150
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6100217196aebc489a18d9c2dac4ece
+      internalID: 582830991
       vertices: []
       indices: 
       edges: []
@@ -233,12 +254,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hp bar_0: -1627858678
-      hp bar_1: 1514361949
-      hp bar_2: -1180527965
-      hp bar_3: -883231705
-      hp bar_4: -597743072
-      hp bar_5: 269270378
+      PortalCambioEscena_0: 762478332
+      PortalCambioEscena_1: -1360332688
+      PortalCambioEscena_10: -196911067
+      PortalCambioEscena_2: 1189741591
+      PortalCambioEscena_3: -1097144377
+      PortalCambioEscena_4: 438507892
+      PortalCambioEscena_5: 1089039078
+      PortalCambioEscena_6: 461423649
+      PortalCambioEscena_7: 582830991
+      PortalCambioEscena_8: 759895266
+      PortalCambioEscena_9: -1991988704
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

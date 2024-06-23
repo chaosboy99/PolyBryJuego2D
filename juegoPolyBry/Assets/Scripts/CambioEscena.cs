@@ -9,7 +9,7 @@ public class CambioEscena : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Lvl3");
+            SceneManager.LoadScene("Lvl2");
         }
     }
 }

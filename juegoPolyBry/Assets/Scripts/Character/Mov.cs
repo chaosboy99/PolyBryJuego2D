@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Mov : MonoBehaviour
 {
+    public float Xinicial, Yinicial;
     public float Speed = 3f;
     public float Jump = 2f;
     public bool atacando = false;
@@ -11,13 +12,13 @@ public class Mov : MonoBehaviour
     public SpriteRenderer Sprite;
     public Animator Animator; 
 
-    // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        Xinicial =  transform.position.x;
+        Yinicial = transform.position.y;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (Input.GetKey("e") && !atacando)
@@ -65,6 +66,10 @@ public class Mov : MonoBehaviour
         {
             Animator.SetBool("Salto", false);
         }
+    }
+    public void Spawn()
+    {
+        transform.position = new Vector3(Xinicial, Yinicial, 0);
     }
     
 }

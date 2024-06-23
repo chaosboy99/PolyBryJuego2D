@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010974288, y: -0.18916333}
+  m_Offset: {x: 0.045435697, y: -0.35836068}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9012401, y: 0.5242058}
+  m_Size: {x: 0.5088602, y: 0.1858111}
   m_EdgeRadius: 0
 --- !u!1 &5423928336874853718
 GameObject:
@@ -89,9 +89,9 @@ GameObject:
   - component: {fileID: -7944155115713152324}
   - component: {fileID: 5757544625978044113}
   - component: {fileID: 2498667668504129921}
-  - component: {fileID: 1937401984270343861}
   - component: {fileID: 5420911840607586518}
-  - component: {fileID: 1490323203502729955}
+  - component: {fileID: 5762684347486719337}
+  - component: {fileID: 2150378146299372424}
   m_Layer: 0
   m_Name: Pj
   m_TagString: Player
@@ -240,23 +240,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1937401984270343861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5423928336874853718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5ef78c0589df284f992f182c0ffca92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 10
-  Jump: 15
-  atacando: 0
-  Sprite: {fileID: -7944155115713152324}
-  Animator: {fileID: 5420911840607586518}
 --- !u!95 &5420911840607586518
 Animator:
   serializedVersion: 5
@@ -278,7 +261,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1490323203502729955
+--- !u!114 &5762684347486719337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,18 +273,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83a5fd89186a244ebafa9ce95faec26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp_bar_0: {fileID: 0}
-  hp_bar_1: {fileID: 0}
-  hp_bar_2: {fileID: 0}
-  hp_bar_3: {fileID: 0}
-  hp_bar_4: {fileID: 0}
-  hp_bar_5: {fileID: 0}
-  inventarioHud: {fileID: 0}
-  life: 100
-  PosicionHpBar: {fileID: 0}
-  PosicionInventarioHud: {fileID: 0}
+  Corazon: {fileID: 0}
+  CantidadCorazones: 4
+  PosicionPrimerCorazon: {fileID: 0}
   MyCanvas: {fileID: 0}
   OffSet: 0
+--- !u!114 &2150378146299372424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5423928336874853718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ef78c0589df284f992f182c0ffca92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Xinicial: 0
+  Yinicial: 0
+  Speed: 10
+  Jump: 15
+  atacando: 0
+  Sprite: {fileID: -7944155115713152324}
+  Animator: {fileID: 5420911840607586518}
 --- !u!1 &8811253094085563441
 GameObject:
   m_ObjectHideFlags: 0
