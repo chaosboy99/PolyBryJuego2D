@@ -101,17 +101,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  distanceToPlayer: 10
-  attaking: 0
-  moveToLeft: 0
-  moveToRight: 0
-  wait: 0
+  checkDistanceToPlayer: 10
+  attacking: 0
   dead: 0
+  enemyHp: 0
   rb2D: {fileID: 1862690576294843699}
   Sprite: {fileID: -6486906842081021570}
-  Animator: {fileID: 0}
+  Animator: {fileID: 6166043252290180265}
   enemigo: {fileID: 0}
-  enemyHp: 0
+  playerPos: {fileID: 2130185673428183716, guid: 35906f700119de84395c02f3b3dbfd30, type: 3}
+  vida: {fileID: 0}
+  distanceAnimalToPlayer: {x: 0, y: 0}
 --- !u!50 &1862690576294843699
 Rigidbody2D:
   serializedVersion: 4

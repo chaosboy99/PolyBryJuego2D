@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.033504978, y: -0.36137527}
+  m_Offset: {x: 0.010974288, y: -0.18916333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.34904578, y: 0.047500968}
+  m_Size: {x: 1.9012401, y: 0.5242058}
   m_EdgeRadius: 0
 --- !u!1 &5423928336874853718
 GameObject:
@@ -225,10 +225,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -252,8 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ef78c0589df284f992f182c0ffca92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  Jump: 1000
+  Speed: 10
+  Jump: 15
   atacando: 0
   Sprite: {fileID: -7944155115713152324}
   Animator: {fileID: 5420911840607586518}
