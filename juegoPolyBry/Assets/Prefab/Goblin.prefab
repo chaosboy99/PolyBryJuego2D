@@ -208,10 +208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca23163ed7388949bdd35b711228762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rutina: 0
-  cronometro: 0
-  animator: {fileID: 2020333793776660495}
-  direccion: 0
-  Speed_Run: 1.5
-  Target: {fileID: 0}
-  atacando: 0
+  Speed: 0
+  Pj: {fileID: 0}
+  Ani: {fileID: 2020333793776660495}
