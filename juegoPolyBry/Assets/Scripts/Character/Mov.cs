@@ -16,10 +16,6 @@ public class Mov : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
     }
-    private void Update()
-    {
-        
-    }
 
     // Update is called once per frame
     void FixedUpdate()

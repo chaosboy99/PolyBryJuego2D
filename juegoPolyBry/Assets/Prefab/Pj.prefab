@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1490323203502729955}
   m_Layer: 0
   m_Name: Pj
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,8 +296,10 @@ MonoBehaviour:
   hp_bar_3: {fileID: 0}
   hp_bar_4: {fileID: 0}
   hp_bar_5: {fileID: 0}
+  inventarioHud: {fileID: 0}
   life: 100
   PosicionHpBar: {fileID: 0}
+  PosicionInventarioHud: {fileID: 0}
   MyCanvas: {fileID: 0}
   OffSet: 0
 --- !u!1 &8811253094085563441
