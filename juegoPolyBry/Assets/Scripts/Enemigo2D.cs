@@ -52,6 +52,4 @@ public class Enemigo2D : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
 }

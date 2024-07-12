@@ -93,8 +93,6 @@ public class Animalmovement : MonoBehaviour
             rb2D.velocity = new Vector2(speed, rb2D.velocity.y);
             Sprite.flipX = false;
         }
-
-
     }
 
     void accion()
